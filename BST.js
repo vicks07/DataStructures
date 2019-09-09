@@ -52,5 +52,50 @@ getRootNode()
 } 
 	print(){
 	console.log(this.root);
-	}
+    }
+    
+    lca(root,val1,val2){
+        //console.log('Root',root.data,val1,val2);
+
+        if(root.data>val1 && root.data>val2){
+            ////console.log('Left',root.val,val1,val2);
+            return this.lca(root.left,val1,val2);
+        }
+        else if(root.data<val1 && root.data<val2){
+           // console.log('Right',root.val,val1,val2);
+            return this.lca(root.right,val1,val2);
+        }
+        else{
+            return root.data;
+        }
+    }
 }
+
+
+// let Main = function(){
+
+
+
+
+    
+
+//     //*** Binary Search Tree */
+//     bst = new BST();
+	
+// 	bst.insert(5);
+// 	bst.insert(3);
+// 	bst.insert(15);
+// 	bst.insert(10);
+// 	bst.insert(12);
+// 	bst.insert(16);
+//     let root = bst.getRootNode();
+//     //console.log('Root',root);
+// 	console.log(bst.lca(root,3,16));    
+//     // //bst.inorder(root);
+//     ///**** End of BST */
+
+
+// }
+
+
+// Main();
