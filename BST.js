@@ -66,6 +66,10 @@ class BST{
             return root.data;
         }
     }
+
+    lca_iterative(root,val1,val2){
+        
+    }
 }
 
 
